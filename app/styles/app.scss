@@ -1,0 +1,104 @@
+$brand-primary: #E55400;
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.etsy-header {
+  border-bottom: 1px solid #E1E3DF;
+  font-family: 'Work Sans', sans-serif;
+  padding: 20px 40px 10px;
+  color: #888;
+
+  &:nth-of-type(2) {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
+
+  input {
+    background: #f9f9f8;
+    border: 1px solid #CFCBC8;
+    box-shadow: inset 0 1px 2px #E9E9E8, 0 0 0 1000px #fbfbfa inset;
+  }
+}
+
+.etsy-sidebar {
+  border-radius: 3px;
+  background-color: #FFF;
+  border: 1px solid #E1E3DF;
+  border-bottom-color: #CBCCC9;
+  color: #444;
+  font-size: 12px;
+  margin: 0 0 12px;
+  padding: 20px;
+
+  .show-more {
+    color: #E55400;
+  }
+}
+
+
+.etsy-card {
+  font-family: 'Work Sans', sans-serif;
+  position: relative;
+  margin-bottom: 20px;
+
+  &__title {
+    color: #444;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__img {
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.14);
+    height: 250px;
+    width: 100%;
+    border-radius: 2px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 0.1s ease;
+
+    &:hover {
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+  }
+
+  &__shopname {
+    font-size: 12px;
+    color: rgba(#444, .5);
+  }
+
+  &__stars {
+    color: #FFA300;
+  }
+
+  &__followers {
+    font-size: 11px;
+    color: #666;
+  }
+
+  &__price {
+    font-size: 16px;
+    color: #444;
+    font-weight: 800;
+  }
+}
