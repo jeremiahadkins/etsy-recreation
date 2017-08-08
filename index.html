@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Etsy recreation</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="conatiner-fluid etsy-header">
+      <div class="row">
+        <div class="col-sm-1">
+          <img src="images/etsy-logo.png" alt="Etsy" width="80">
+        </div>
+        <!-- <form class="form-inline"> -->
+          <!-- <div class="form-group"> -->
+            <div class="col-sm-4">
+              <input type="text" placeholder="Search for items or shops" class="form-control">
+            </div>
+            <button class="btn btn-primary">Search</button>
+          <!-- </div> -->
+        <!-- </form> -->
+      </div>
+      
+
+    </div>
+    <div class="container-fluid etsy-header">
+      <ul class="etsy-header__nav list-inline">
+        <li class="etsy-header__item">Clothing & Accessories</li>
+        <li class="etsy-header__item">Jewelry</li>
+        <li class="etsy-header__item">Craft Supplies & Tools</li>
+        <li class="etsy-header__item">Weddings</li>
+        <li class="etsy-header__item">Entertainment</li>
+        <li class="etsy-header__item">Home & Living</li>
+        <li class="etsy-header__item">Kids & Baby</li>
+        <li class="etsy-header__item">Vintage</li>
+      </ul>
+    </div>
+    <div class="container-fluid" style="padding: 30px;">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="etsy-sidebar">
+            <h6><strong>All categories</strong></h6>
+            <ul class="list-unstyled">
+              <li style="margin-left:10px;">Home & Living</li>
+              <li style="margin-left:10px;">Craft Supplies & Tools</li>
+              <li style="margin-left:10px;">Art & Collectibles</li>
+              <li style="margin-left:10px;">Paper & Party Supplies</li>
+            </ul>
+            <span class="show-more">+ Show More</span>
+            <hr>
+            <h6><strong>Color</strong></h6>
+            <div class="checkbox">
+               <label>
+                 <input type="checkbox">Green
+               </label>
+            </div>
+            <div class="checkbox">
+               <label>
+                 <input type="checkbox">White
+               </label>
+            </div>
+            <div class="checkbox">
+               <label>
+                 <input type="checkbox">Brown
+               </label>
+            </div>
+            <div class="checkbox">
+               <label>
+                 <input type="checkbox">Blue
+               </label>
+            </div>
+            <div class="checkbox">
+               <label>
+                 <input type="checkbox">Gold
+               </label>
+            </div>
+            <span class="show-more">+ Show More</span>
+            <hr>
+            <h6><strong>Shop Location</strong></h6>
+            <div class="radio">
+               <label>
+                 <input type="radio">Anywhere
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">United States
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">Custom
+               </label>
+            </div>
+            <input type="text" placeholder="Enter Locaton" class="form-control">
+            <hr>
+            <h6><strong>Item Type</strong></h6>
+            <div class="radio">
+               <label>
+                 <input type="radio">All Items
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">Handmade
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">Vintage
+               </label>
+            </div>
+            <input type="text" placeholder="Enter Locaton" class="form-control">
+            <hr>
+            <h6><strong>Price($)</strong></h6>
+            <div class="radio">
+               <label>
+                 <input type="radio">Any Price
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">Under $25
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">$25 to $50
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">$50 to $100
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">Over $100
+               </label>
+            </div>
+            <div class="radio">
+               <label>
+                 <input type="radio">Custom
+               </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10" id="etsy-items"></div>
+      </div>
+    </div>
+
+    <script id="etsy-item" type="text/x-dash-handlebars-template">
+      <div class="col-md-3 etsy-card">
+        <div class="etsy-card__img img-fluid rounded">
+          <img src="{{ Images.0.url_570xN }}" alt="{{ title }}" class="etsy-card__img">
+        </div>
+        <h2 class="etsy-card__title">{{ title }}</h2>
+        <h5 class="etsy-card__shopname">{{ Shop.shop_name }}</h5>
+        <span class="etsy-card__stars">★★★★★</span>
+        {{#if num_favorers}}
+          <span class="etsy-card_followers">
+          ({{ num_favorers }})
+          </span>
+        {{/if}}
+        <div class="etsy-card__price">${{ price }}</div>
+      </div>
+
+
+    
+    </script>
+    <script src="js/bundle.js"></script>
+  
+  </body>
+</html>
